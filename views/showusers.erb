@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Журнал записи</title>
+</head>
+<body>
+	<h3>Журнал записи клиентов</h3>
+	
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th> Имя </th>
+				<th> Телефон </th>
+				<th> Время </th>
+				<th> Почта </th>
+				<th> Парикмахер </th>
+				<th> Цвет </th>
+			</tr>	
+		</thead>
+		<tbody>
+			<% $results.each do |row|%>
+			<tr>
+				<td><%= row['username'] %></td>
+				<td><%= row['phone'] %></td>
+				<td><%= row['datestamp'] %></td>
+				<td><%= row['email'] %></td>
+				<td><%= row['barber'] %></td>
+				<td><%= row['color'] %></td>
+			</tr>
+			<% end %>	
+		</tbody>		
+	</table>
+
+</body>
+</html>

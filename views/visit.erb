@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Visit</title>
+</head>
+<body>
+	<h2>запись</h2>
+	<p>На этой странице вы сможете записаться к нам</p>
+
+<form action="visit" method="POST" role="form">
+
+  <div class="form-group">
+    <label id="aaa">Ваше имя</label>
+    <input name="user_name" type="text" class="form-control" placeholder="Введите ваше имя" value="<%= @user_name %>">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+
+  <div class="form-group">
+    <label>Телефон</label>
+    <input name="phone" type="text" class="form-control ccc" placeholder="Введите ваш телефон" value="<%= @phone %>">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Email address</label>
+    <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" value="<%= @email %>">
+  </div>
+
+  <div class="form-group">
+    <label>Когда вас ждать?</label>
+    <input id="datetimepicker" name="date_time" type="text" class="form-control" placeholder="Укажите время записи" value="<%= @date_time %>">
+  </div>
+
+  <div class="form-group">
+      <label for="inputState">Выберите мастера</label>
+      <select name="barber" id="inputState" class="form-control" value="<%= @barber %>">
+      <% $results.each do |row| %>
+        <option <%=@barber == row['name'] ? 'selected' : ''%> ><%= row['name'] %> </option>
+      <% end %>
+      </select>
+    </div>
+
+  <div class="form-group">
+    <label>Какую краску для вас подготовить?</label>
+    <select name="colorpicker" class="form-control" id="color">
+      <option value="#7bd148">Green</option>
+      <option value="#5484ed">Bold blue</option>
+      <option value="#a4bdfc">Blue</option>
+      <option value="#46d6db">Turquoise</option>
+      <option value="#7ae7bf">Light green</option>
+      <option value="#51b749">Bold green</option>
+      <option value="#fbd75b">Yellow</option>
+      <option value="#ffb878">Orange</option>
+      <option value="#ff887c">Red</option>
+      <option value="#dc2127">Bold red</option>
+      <option value="#dbadff">Purple</option>
+      <option value="#e1e1e1">Gray</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+  	<p><b>Введите комментарий:</b></p>
+    <p><textarea rows="10" cols="45" name="comments"></textarea></p>
+  </div>  
+  
+  <button type="submit" class="btn btn-primary btn-lg">Записаться</button>
+</form>
+
+<script type="text/javascript">
+  <%# Рома сказал так писать не правильно
+  $('#aaa').css('background-color','magenta');
+  $('.ccc').css('background-color','yellow');
+
+  $('#color').simplecolorpicker();
+  %>
+  $(function(){ <%# вот при такой записи, код внутри {} исполнится только после загрузки всей страницы. Так делать правильно!%>
+    $('#color').simplecolorpicker();
+    $('#datetimepicker').datetimepicker();    
+  })  
+</script>
+
+</body>
+</html>
