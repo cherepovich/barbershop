@@ -7,7 +7,8 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-
+#Vova typed
+server "18.219.151.21", :user => "deploy", :roles => %{web app}
 
 # role-based syntax
 # ==================

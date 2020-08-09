@@ -10,7 +10,6 @@
 #Vova typed
 server "18.219.151.21", :user => "deploy", :roles => %{web app}
 
-
 # role-based syntax
 # ==================
 
