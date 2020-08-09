@@ -1,6 +1,17 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activemodel (6.0.3.2)
+      activesupport (= 6.0.3.2)
+    activerecord (6.0.3.2)
+      activemodel (= 6.0.3.2)
+      activesupport (= 6.0.3.2)
+    activesupport (6.0.3.2)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+      zeitwerk (~> 2.2, >= 2.2.2)
     airbrussh (1.4.0)
       sshkit (>= 1.6.1, != 1.7.0)
     backports (3.18.1)
@@ -19,6 +30,7 @@ GEM
     concurrent-ruby (1.1.6)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
+    minitest (5.14.1)
     multi_json (1.15.0)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
@@ -35,6 +47,9 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.8.1)
       tilt (~> 2.0)
+    sinatra-activerecord (2.0.18)
+      activerecord (>= 4.1)
+      sinatra (>= 1.0)
     sinatra-contrib (2.0.8.1)
       backports (>= 2.8.2)
       multi_json
@@ -48,7 +63,11 @@ GEM
     sshkit (1.21.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
+    thread_safe (0.3.6)
     tilt (2.0.10)
+    tzinfo (1.2.7)
+      thread_safe (~> 0.1)
+    zeitwerk (2.4.0)
 
 PLATFORMS
   ruby
@@ -59,6 +78,7 @@ DEPENDENCIES
   capistrano-passenger
   capistrano-rbenv
   sinatra
+  sinatra-activerecord
   sinatra-reloader
   sqlite3
 
