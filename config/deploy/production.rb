@@ -23,7 +23,6 @@ server "18.219.151.21", :user => "deploy", :roles => %{web app}
 # role :db,  %w{deploy@example.com}
 
 
-
 # Configuration
 # =============
 # You can set any configuration variable like in config/deploy.rb
