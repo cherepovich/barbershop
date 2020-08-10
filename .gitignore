@@ -1,4 +1,3 @@
 db/barbershop.sqlite
 secrets.yml
-log/
 *.log
