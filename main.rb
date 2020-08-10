@@ -1,10 +1,11 @@
 #encoding: utf-8
 require 'rubygems'
 require 'sinatra'
+require 'sinatra/base'
 require 'sinatra/reloader'
 require 'sqlite3'
 
-class MyApp < Sinatra::Base
+#class MyApp < Sinatra::Base
   def is_barber_exists? name
     $db.execute('SELECT * FROM barbers WHERE name=?', [name]).length > 0
   end
@@ -127,4 +128,4 @@ class MyApp < Sinatra::Base
     f.close
     return true
   end
-end
+#end
