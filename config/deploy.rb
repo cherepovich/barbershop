@@ -12,7 +12,7 @@ set :deploy_to, "/home/deploy/www_barbershop"
 
 set :linked_files, ["config/secrets.yml"]
 
-set :rbenv_path, '/home/deploy/.rbenv/'
+set :rbenv_path, '/home/deploy/.rbenv'
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
